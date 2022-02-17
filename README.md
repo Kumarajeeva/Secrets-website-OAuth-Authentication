@@ -18,6 +18,10 @@ INSTALLATION AND RUNNING:
 * Go to "Create credentials" and create "OAUTH client ID".
 * Mention the origin and redirect URLs and click "Create".
 * Copy the "CLIENT_ID" and "CLIENT_SECRET" into a .env file in the project directory.
+* Install "Robo3T" and MongoDb software in the PC.
+* In the app.js file, change the URL in the "mongoose.connect" line to the URL of your own local mongoDB database.
+* Now open a new tab in Hyper and run the command "mongod".
+* Now open a new tab in Hyper and run the command "mongo".
 * Now head to Hyper terminal and run "node app.js" command to run the project.
 
 **Project done by Kumarajeeva Elavarasan**
