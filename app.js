@@ -1,4 +1,3 @@
-require('dotenv').config()
 const express=require("express");
 const ejs= require("ejs");
 const bodyParser=require("body-parser");
@@ -8,8 +7,10 @@ const passport=require("passport");
 const passportLocalMongoose=require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate=require("mongoose-findorcreate");
+const DotenvModule = require('dotenv');
 
 const app=express();
+DotenvModule.config();
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
@@ -24,7 +25,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://Kumarajeeva:Mongodb29%40@cluster0.wzhai.mongodb.net/secretswebsiteDB", {useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.connect(process.env.CONNECTION_URL, {useNewUrlParser: true,useUnifiedTopology: true});
 
 // Secret String Instead of Two Keys
 // For convenience, you can also pass in a single secret string instead of two keys.

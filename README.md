@@ -1,7 +1,5 @@
 # SECRETS WEBSITE
 
-Check the deployed website in this URL: https://kumarajeeva-secrets-website.herokuapp.com/
-
 DESCRIPTION:
 The developed website is a "secrets website" where users can share their secrets anonymously. Users have to register and login to submit and access the secrets. The user profiles and secrets are stored in a MongoDB database. This website is developed using Node.js, Express, EJS and MongoDB.
 
